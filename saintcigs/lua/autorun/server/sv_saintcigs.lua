@@ -76,4 +76,4 @@ hook.Add("PlayerDeath", "ToResetValues", function(ply)
     ply.HasAsthma = false
     ply.ShotsTaken = 0
 end)
--- Kurdish Thragg helped me with troubleshooting <3
+-- Kurdish Thragg(My friend) helped me with troubleshooting <3

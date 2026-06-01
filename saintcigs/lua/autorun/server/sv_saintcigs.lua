@@ -58,7 +58,6 @@ hook.Add("PlayerIsOverDosing", "Saints Overdose", function(ply)
     end)
     timer.Create(nameToCheckIfOverdose, effectlength, 1, function()
         if ply:Alive() then
-            print("Fuck you")
             ply:SetRunSpeed(ply:GetRunSpeed() / 1.5)
         else
             timer.Remove(nameToCheckIfOverdose)

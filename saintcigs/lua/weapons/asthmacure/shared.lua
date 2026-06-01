@@ -33,11 +33,6 @@ function SWEP:PrimaryAttack()
         owner:ChatPrint("God breathing feels easier!")
     else
         hook.Call("PlayerIsOverDosing", nill, owner)
-        if owner.ShotsTaken == nil then
-            owner.ShotsTaken = 1
-        else
-            owner.ShotsTaken = owner.ShotsTaken + 1
-        end
     end
     owner:StripWeapon("asthmacure")
 end

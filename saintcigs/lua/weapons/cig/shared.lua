@@ -77,7 +77,7 @@ function SWEP:CigEffects(ply, self)
             ply:SetNW2Float("CigBlur", CurTime() + 20)
             timer.Create(nameForCigEffects, 5, 1, function()
                 local asthmachance = math.random(0,100)
-                if 1 == 1 then
+                if asthmachance == 1 then
                     ply:ChatPrint("My airway feels tight... Maybe I should see a doctor...")
                     hook.Call("PlayerHasContractedAsthma",nil, ply)
                 end

@@ -45,7 +45,7 @@ hook.Add("PlayerIsOverDosing", "Saints Overdose", function(ply)
             local dmg = (amountOfOverdoesDmg[shotstaken] / ply:GetMaxHealth()) * 100
             local dmgtotake = dmg / effectlength
             ply:ViewPunch(Angle(-1,0,0))
-            ply:SetHealth(ply:Health() - dmgtotake)
+            ply:TakeDamage(dmgtotake)
             if ply:Health() < 1 then
                 timer.Remove(nameToCheckIfOverdose)
                 timer.Remove(nameForOverdoseEffects)
@@ -76,4 +76,3 @@ hook.Add("PlayerDeath", "ToResetValues", function(ply)
     ply.HasAsthma = false
     ply.ShotsTaken = 0
 end)
--- Kurdish Thragg(My friend) helped me with troubleshooting <3
